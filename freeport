@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# cd $HOME/.freeport
+# ./main.sh $1
+# cd $OLDPWD
+
+# echo $0
+# echo $#
+
+if [ $# = 0] then
+      echo "
+            Welcome to FreePort :) 
+            Get Rid of Address Already in use error with a single command.
+            (For Local Development Purposes Only)
+
+            ${star}${blue} https://github.com/thenullterminator/FreePort ${normal}
+
+            Usage: freeport [PORT_NUMBER]
+      "
+      exit 1
+else
+fi
+
