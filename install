@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Working from current directory having freeport
-
 TARGET_DIR="$HOME/.freeport"
 
 
@@ -9,7 +8,7 @@ TARGET_DIR="$HOME/.freeport"
 if [[ -f "main.sh" && -f "README.md" && -f "freeport" ]]; then
     :
 else
-    echo "please cd to the folder containing proxyman"
+    echo "please cd to the folder containing freeport"
     exit 1
 fi
 
