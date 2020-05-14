@@ -5,26 +5,29 @@ TARGET_DIR="$HOME/.freeport"
 
 
 # verify if this is current directory
-if [[ -f "main.sh" && -f "README.md" && -f "freeport" ]]; then
+if [[ -f "main" && -f "README.md" && -f "freeport" ]]; then
     :
 else
     echo "please cd to the folder containing freeport"
     exit 1
 fi
 
+
+
 # copy the contents to ~/.freeport/ (hidden folder in home directory)
 mkdir -p $TARGET_DIR
 cp * $TARGET_DIR
+chmod +x $TARGET_DIR/main
 
 # add to path
 mkdir -p $HOME/.local/bin
 cp freeport $HOME/.local/bin
 chmod +x $HOME/.local/bin/freeport
 
-# which proxyman &> /dev/null
-# if [ "$?" != 0 ]; then
-#     echo "Failed to install :("
-#     exit
-# fi
+which freeport &> /dev/null
+if [ "$?" != 0 ]; then
+    echo "Failed to install :("
+    exit
+fi
 
 echo "Installed successfully."

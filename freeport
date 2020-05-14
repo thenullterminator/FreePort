@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 if [ $# = 0 ]; then
       
       echo "
@@ -17,5 +16,5 @@ fi
 
 
 cd $HOME/.freeport
-./main.sh $1
+./main $1
 cd $OLDPWD

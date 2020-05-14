@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# echo "Recieved Port--> $1"
+
+PORT="localhost:$1"
+
+lsof -i:$1 > ./info
+
+awk -v x=$PORT  '{ if($9 == x) { system("kill -9 " $2); print "\n",x," liberated 🤘"; }  }' info

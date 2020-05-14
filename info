@@ -1,0 +1,2 @@
+COMMAND   PID              USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+python3 13908 thenullterminator    4u  IPv4 1035025      0t0  TCP localhost:8000 (LISTEN)
