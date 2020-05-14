@@ -6,4 +6,6 @@ PORT=$1
 
 lsof -i:$1 > ./info
 
-awk -v x=$PORT  '{ if($8 == "TCP" || $8 == "UDP") { system("kill -9 " $2); print "\n",x," liberated 🤘"; }  }' info
+awk -v x=$PORT  '{ if($8 == "TCP" || $8 == "UDP") { system("kill -9 " $2);}  }' info
+
+echo "Port $PORT liberated 🤘 "
