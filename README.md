@@ -1,6 +1,6 @@
 ## FreePort
 
-### Get rid of Address/Port already in use error with a single command.
+Get rid of Address/Port already in use error with a single command.
 
 
 
